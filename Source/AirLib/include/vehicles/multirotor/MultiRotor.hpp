@@ -129,7 +129,8 @@ private:    // methods
         const Vector3r back_propeller_normal(-1, 0, 0);
 
         RotorParams rotor_params = params.getParams().rotor_params;
-        rotor_params.C_T = 20.5;
+        rotor_params.max_thrust = 3.4 / 0.8;
+        rotor_params.max_torque = 0.06 / 0.8;
 
         const Rotor rotor(back_propeller_point, back_propeller_normal, RotorTurningDirection::RotorTurningDirectionCW,
                           rotor_params, environment, 4);
